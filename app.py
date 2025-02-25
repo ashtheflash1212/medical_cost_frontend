@@ -72,7 +72,7 @@ def set_bg(image_file):
     st.markdown(page_bg, unsafe_allow_html=True)
 
 # Update the background image path
-set_bg("/Users/ashwincharles/Desktop/medical_cost/bgaisc.jpeg")
+set_bg("bgaisc.jpeg") 
 
 # Title and subtitle
 st.markdown("<h1 class='custom-title'>Medical Cost Predictor</h1>", unsafe_allow_html=True)
