@@ -2,11 +2,11 @@ import pickle
 import numpy as np
 import streamlit as st
 import base64
+import os
 
 # Load the trained model
 with open("random_forest_model.pkl", "rb") as file:
     model = pickle.load(file)
-
 
 # Function to set a local background image and apply styling
 def set_bg(image_file):
@@ -28,7 +28,6 @@ def set_bg(image_file):
         text-align: center;
         font-weight: bold;
         padding-bottom: %;
-
     }}
 
     .custom-subtitle {{
@@ -61,7 +60,6 @@ def set_bg(image_file):
         font-size: 16px !important;
         font-weight: bold !important;
     }}
-    
 
     /* Center predict button */
     .button-container {{
@@ -73,8 +71,8 @@ def set_bg(image_file):
     """
     st.markdown(page_bg, unsafe_allow_html=True)
 
-# Set the background image
-set_bg("images/bgaisc.jpeg")
+# Update the background image path
+set_bg("/Users/ashwincharles/Desktop/medical_cost/bgaisc.jpeg")
 
 # Title and subtitle
 st.markdown("<h1 class='custom-title'>Medical Cost Predictor</h1>", unsafe_allow_html=True)
